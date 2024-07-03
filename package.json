@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  
-    "scripts": {
-      "dev": "nodemon src/index.ts",
-      "build": "prisma generate && tsc",
-      "start": "node dist/index.js",
-      "vercel-build": "prisma generate && prisma migrate deploy && tsc"
-    }
-  ,
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "npx prisma generate && tsc",
+    "start": "node dist/index.js",
+    "vercel-build": "npx prisma generate && npx prisma migrate deploy && tsc"
+  },
   "dependencies": {
     "@prisma/client": "^5.16.1",
     "express": "^4.19.2"
@@ -19,6 +17,7 @@
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.9",
     "nodemon": "^3.1.4",
+    "prisma": "^5.16.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   }
